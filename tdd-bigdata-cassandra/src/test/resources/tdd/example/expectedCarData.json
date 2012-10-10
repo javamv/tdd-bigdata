@@ -1,0 +1,49 @@
+{
+    "name" : "car",
+    "columnFamilies" : [{
+    "name" : "yearOfProduction",
+	"keyType" : "UTF8Type",
+	"defaultColumnValueType" : "UTF8Type",
+	"comparatorType" : "UTF8Type",
+        "rows" : [{
+            "key" : "2010",
+            "columns" : [{
+                "name" : "brand",
+                "value" : "Nissan"
+            },
+            {
+                "name" : "model",
+                "value" : "Maxima"
+            },
+            {
+                "name" : "price",
+                "value" : "17000"
+            },
+            {
+                "name" : "currency",
+                "value" : "USD"
+            }
+            ]
+        },
+        {
+            "key" : "2009",
+            "columns" : [{
+                            "name" : "brand",
+                            "value" : "Toyota"
+                        },
+                        {
+                            "name" : "model",
+                            "value" : "Corolla"
+                        },
+                        {
+                            "name" : "price",
+                            "value" : "17000"
+                        },
+                        {
+                            "name" : "currency",
+                            "value" : "USD"
+                        }
+                        ]
+        }]
+    }]
+}

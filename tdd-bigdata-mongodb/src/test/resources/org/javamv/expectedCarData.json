@@ -1,0 +1,7 @@
+{
+    "Car":
+            [
+                {"brand":"Nissan", "model":"Almera", "year":2009, "price":13000, "currency":"USD"},
+                {"brand":"Toyota", "model":"Corolla", "year":2010, "price":17000, "currency":"USD"}
+            ]
+}
