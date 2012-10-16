@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="C:\dev\Projects\.net\mongodb-tdd-sandbox\mongodb-tdd-sandbox\mongodb-tdd-sandbox.csproj" total="0" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2012-09-24" time="15:54:26">
+  <environment nunit-version="2.6.1.12217" clr-version="2.0.50727.5456" os-version="Microsoft Windows NT 6.1.7601 Service Pack 1" platform="Win32NT" cwd="C:\dev\Projects\.net\mongodb-tdd-sandbox\mongodb-tdd-sandbox" machine-name="VMOSKALENKO" user="VMoskalenko" user-domain="KIEV" />
+  <culture-info current-culture="en-US" current-uiculture="en-US" />
+  <test-suite type="Project" name="C:\dev\Projects\.net\mongodb-tdd-sandbox\mongodb-tdd-sandbox\mongodb-tdd-sandbox.csproj" executed="True" result="Inconclusive" success="False" time="0.008" asserts="0">
+    <results>
+      <test-suite type="Assembly" name="C:\dev\Projects\.net\mongodb-tdd-sandbox\mongodb-tdd-sandbox\bin\Debug\mongodb-tdd-sandbox.exe" executed="True" result="Inconclusive" success="False" time="0.001" asserts="0" />
+    </results>
+  </test-suite>
+</test-results>
