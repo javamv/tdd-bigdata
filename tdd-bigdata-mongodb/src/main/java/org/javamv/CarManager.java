@@ -15,52 +15,60 @@ import java.util.List;
  */
 public class CarManager {
 
-	public void insertNewCar(Car car) {
-		DB database = getDatabase();
+	/*private String host;
+	private int port;*/
 
-		DBObject carDbObject = new BasicDBObject();
-		carDbObject.put("brand", car.getBrand());
-		carDbObject.put("model", car.getModel());
-		carDbObject.put("year", car.getYear());
-		carDbObject.put("price", car.getPrice());
-		carDbObject.put("currency", car.getCurrency());
-		getCarCollection(database).insert(carDbObject);
-	}
+/*	public CarManager(String host, int port) {
+		this.host = host;
+		this.port = port;
+	}*/
 
-	private DBCollection getCarCollection(DB database) {
-		return database.getCollection(Car.class.getSimpleName());
-	}
+	//public void insertNewCar(Car car) {
+	//	DB database = getDatabase();
 
-	private DB getDatabase() {
-		Mongo mongo;
-		try {
-			mongo = new Mongo("localhost", 27017);
-		} catch (UnknownHostException e) {
-			throw new RuntimeException(e);
-		}
+	//	DBObject carDbObject = new BasicDBObject();
+	//	carDbObject.put("brand", car.getBrand());
+	//	carDbObject.put("model", car.getModel());
+	//	carDbObject.put("year", car.getYear());
+	//	carDbObject.put("price", car.getPrice());
+	//	carDbObject.put("currency", car.getCurrency());
+	//	getCarCollection(database).insert(carDbObject);
+	//}
 
-		return mongo.getDB("test");
-	}
+	//private DBCollection getCarCollection(DB database) {
+	//	return database.getCollection(Car.class.getSimpleName());
+	//}
 
-	public List<Car> findAllByYear(int year) {
-		DB database = getDatabase();
-		DBObject exampleDbObject= new BasicDBObject();
-		exampleDbObject.put("year", year);
-		List<DBObject> dbObjects = getCarCollection(database).find(exampleDbObject).toArray();
-		return convertDbObjectsToCars(dbObjects);
-	}
+	//private DB getDatabase() {
+	//	Mongo mongo;
+	//	try {
+	//		mongo = new Mongo(host, port);
+	//	} catch (UnknownHostException e) {
+	//		throw new RuntimeException(e);
+	//	}
+	  //
+		//return mongo.getDB("test");
+	//}
 
-	private List<Car> convertDbObjectsToCars(List<DBObject> dbObjects) {
-		List<Car> carList = new ArrayList<Car>(dbObjects.size());
-		for (DBObject dbObject: dbObjects) {
-			Car car = new Car(
-					dbObject.get("brand").toString(),
-					dbObject.get("model").toString(),
-					new Integer(dbObject.get("year").toString()),
-					new Integer(dbObject.get("price").toString()),
-					dbObject.get("currency").toString());
-			carList.add(car);
-		}
-		return carList;
-	}
+	//public List<Car> findAllByYear(int year) {
+	//	DB database = getDatabase();
+	//	DBObject exampleDbObject= new BasicDBObject();
+	//	exampleDbObject.put("year", year);
+	//	List<DBObject> dbObjects = getCarCollection(database).find(exampleDbObject).toArray();
+	//	return convertDbObjectsToCars(dbObjects);
+	//}
+
+	//private List<Car> convertDbObjectsToCars(List<DBObject> dbObjects) {
+	//	List<Car> carList = new ArrayList<Car>(dbObjects.size());
+	//	for (DBObject dbObject: dbObjects) {
+	//		Car car = new Car(
+	//				dbObject.get("brand").toString(),
+	//				dbObject.get("model").toString(),
+	//				new Integer(dbObject.get("year").toString()),
+	//				new Integer(dbObject.get("price").toString()),
+	//				dbObject.get("currency").toString());
+	//		carList.add(car);
+	//	}
+	//	return carList;
+	//}
 }
