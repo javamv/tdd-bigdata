@@ -37,8 +37,8 @@ public class WhenANewCarIsCreatedEmbedded {
 	@UsingDataSet(locations = "initialCarData.json", loadStrategy = LoadStrategyEnum.CLEAN_INSERT)
 	@ShouldMatchDataSet(location = "expectedCarData.json")
 	public void should_be_inserted_into_repository() {
-		CarManager carManager = new CarManager("0.0.0.0", 2307);
-	    carManager.insertNewCar(new Car("Toyota", "Corolla", 2010, 17000, "USD"));
+		//CarManager carManager = new CarManager("0.0.0.0", 2307);
+	    //carManager.insertNewCar(new Car("Toyota", "Corolla", 2010, 17000, "USD"));
 	}
 
 }
