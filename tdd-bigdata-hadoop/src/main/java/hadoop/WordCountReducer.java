@@ -11,9 +11,9 @@ public class WordCountReducer extends Reducer<Text, LongWritable, Text, LongWrit
     @Override
     protected void reduce(Text token, Iterable<LongWritable> counts, Context context)
           throws IOException, InterruptedException {
-       long n = 0;
+/*       long n = 0;
        for (LongWritable count : counts)
           n += count.get();
-       context.write(token, new LongWritable(n));
+       context.write(token, new LongWritable(n));*/
     }
 }

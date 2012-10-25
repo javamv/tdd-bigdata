@@ -1,4 +1,4 @@
-package unit;
+package wordcount.unit;
 
 import hadoop.WordCountMapper;
 import hadoop.WordCountReducer;

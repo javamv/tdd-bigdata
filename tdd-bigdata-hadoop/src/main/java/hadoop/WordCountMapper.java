@@ -10,8 +10,8 @@ public class WordCountMapper extends Mapper<LongWritable, Text, Text, LongWritab
 	
     @Override
     protected void map(LongWritable offset, Text text, Context context) throws IOException, InterruptedException {
-       for (String token : text.toString().split("\\s+")) {
+/*       for (String token : text.toString().split("\\s+")) {
           context.write(new Text(token), new LongWritable(1));
-       }
+       }*/
     }
  }

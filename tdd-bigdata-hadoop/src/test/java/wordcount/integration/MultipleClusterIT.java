@@ -1,4 +1,4 @@
-package integration;
+package wordcount.integration;
 
 import java.util.ArrayList;
 import java.util.Collection;

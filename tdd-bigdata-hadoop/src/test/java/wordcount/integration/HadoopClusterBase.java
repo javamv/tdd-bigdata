@@ -1,4 +1,4 @@
-package integration;
+package wordcount.integration;
 
 import java.io.IOException;
 

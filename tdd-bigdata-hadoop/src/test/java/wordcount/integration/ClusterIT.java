@@ -1,4 +1,4 @@
-package integration;
+package wordcount.integration;
 
 import hadoop.WordCountMapper;
 import hadoop.WordCountReducer;

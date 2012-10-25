@@ -1,23 +1,17 @@
-package unit;
+package wordcount.unit;
 
 import java.util.ArrayList;
-
 import java.util.Collection;
 
+import org.apache.hadoop.io.LongWritable;
+import org.apache.hadoop.io.Text;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
-import static junit.framework.Assert.*;
-
-/**
- * A demonstration class to get a feel for speed of parameterized tests
- * @author jheintz
- *
- */
 @RunWith(value = Parameterized.class)
-public class ManyWordTest {
+public class ManyWordCountTest extends AbstractWordCount {
 
 	private String input;
 	private String value;
@@ -30,7 +24,7 @@ public class ManyWordTest {
 	 * 
 	 * @param number
 	 */
-	public ManyWordTest(int number) {
+	public ManyWordCountTest(int number) {
 		count = number;
 		value = Integer.toString(number);
 
@@ -45,7 +39,7 @@ public class ManyWordTest {
 
 	@Parameters
 	public static Collection<Object[]> data() {
-		int size = 100;
+		int size = 1000;
 		Collection<Object[]> results = new ArrayList<Object[]>(size);
 		for (int i = 1; i < size; i++) { // zero gets messed up, test separately
 			results.add(new Object[] { i });
@@ -54,10 +48,10 @@ public class ManyWordTest {
 	}
 
 	@Test
-	public void testDoNothing() {
-		assertNotNull(input);
-		assertNotNull(value);
-		assertTrue(count>0);
+	public void testMapReduce() {
+		mapReduceDriver.withInput(new LongWritable(1), new Text(input));
+		mapReduceDriver.addOutput(new Text(value), new LongWritable(count));
+		mapReduceDriver.runTest();
 	}
 
 }
