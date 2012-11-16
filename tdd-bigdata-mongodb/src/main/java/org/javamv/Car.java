@@ -7,38 +7,38 @@ package org.javamv;
  * Time: 5:29 PM
  */
 public class Car {
-
-	private String brand;
-	private String model;
-	private int year;
-	private int price;
-	private String currency;
-
-	public String getBrand() {
-		return brand;
-	}
-
-	public String getModel() {
-		return model;
-	}
-
-	public int getYear() {
-		return year;
-	}
-
-	public int getPrice() {
-		return price;
-	}
-
-	public String getCurrency() {
-		return currency;
-	}
-
-	public Car(String brand, String model, int year, int price, String currency) {
-		this.brand = brand;
-		this.model = model;
-		this.year = year;
-		this.price = price;
-		this.currency = currency;
-	}
+//
+//	private String brand;
+//	private String model;
+//	private int year;
+//	private int price;
+//	private String currency;
+//
+//	public String getBrand() {
+//		return brand;
+//	}
+//
+//	public String getModel() {
+//		return model;
+//	}
+//
+//	public int getYear() {
+//		return year;
+//	}
+//
+//	public int getPrice() {
+//		return price;
+//	}
+//
+//	public String getCurrency() {
+//		return currency;
+//	}
+//
+//	public Car(String brand, String model, int year, int price, String currency) {
+//		this.brand = brand;
+//		this.model = model;
+//		this.year = year;
+//		this.price = price;
+//		this.currency = currency;
+//	}
 }

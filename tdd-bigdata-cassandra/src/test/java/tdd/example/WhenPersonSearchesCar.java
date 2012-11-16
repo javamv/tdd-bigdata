@@ -22,17 +22,17 @@ import static org.junit.Assert.assertThat;
  */
 public class WhenPersonSearchesCar {
 
-	@ClassRule
-	public static EmbeddedCassandra embeddedCassandra = newEmbeddedCassandraRule().build();
-
-	@Rule
-	public CassandraRule cassandraRule = newCassandraRule().defaultEmbeddedCassandra("test");
-
-	@Test
-	@UsingDataSet(locations = "expectedCarData.json", loadStrategy = LoadStrategyEnum.CLEAN_INSERT)
-	public void should_find_one_car_by_year() {
-		CarManager carManager = new CarManager();
-		assertThat(carManager.getCarByYearKey(2010).getBrand(), is("Nissan"));
-	}
+//	@ClassRule
+//	public static EmbeddedCassandra embeddedCassandra = newEmbeddedCassandraRule().build();
+//
+//	@Rule
+//	public CassandraRule cassandraRule = newCassandraRule().defaultEmbeddedCassandra("test");
+//
+//	@Test
+//	@UsingDataSet(locations = "expectedCarData.json", loadStrategy = LoadStrategyEnum.CLEAN_INSERT)
+//	public void should_find_one_car_by_year() {
+//		CarManager carManager = new CarManager();
+//		assertThat(carManager.getCarByYearKey(2010).getBrand(), is("Nissan"));
+//	}
 
 }
